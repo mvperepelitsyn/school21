@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 17:22:21 by dfrost-a          #+#    #+#             */
-/*   Updated: 2018/12/10 16:38:05 by dfrost-a         ###   ########.fr       */
+/*   Created: 2018/12/06 16:23:52 by dfrost-a          #+#    #+#             */
+/*   Updated: 2018/12/06 16:51:32 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	int i;
+	size_t	i;
+	size_t	k;
 
 	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[i])
-	{
-		f(i, &s[i]);
+	k = 0;
+	while (s1[i] != '\0')
 		i++;
+	while (s2[k])
+	{
+		s1[i] = s2[k];
+		i++;
+		k++;
 	}
+	s1[i] = '\0';
+	return (s1);
 }

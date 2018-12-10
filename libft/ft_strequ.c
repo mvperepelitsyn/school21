@@ -6,7 +6,7 @@
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 11:07:05 by dfrost-a          #+#    #+#             */
-/*   Updated: 2018/12/01 14:13:55 by dfrost-a         ###   ########.fr       */
+/*   Updated: 2018/12/10 16:57:23 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_strequ(char const *s1, char const *s2)
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (0);
-	while (s1[i])
+	while (s1[i] || s2[i])
 	{
 		if (s1[i] != s2[i])
 			return (0);

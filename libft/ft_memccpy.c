@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/24 17:22:21 by dfrost-a          #+#    #+#             */
-/*   Updated: 2018/12/10 16:38:05 by dfrost-a         ###   ########.fr       */
+/*   Created: 2018/12/05 14:17:08 by dfrost-a          #+#    #+#             */
+/*   Updated: 2018/12/05 14:54:23 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	*ft_memccpy(void *restrict dst, const void *restrict src,
+		int c, size_t n)
 {
-	int i;
+	size_t			i;
+	unsigned char	*source;
+	unsigned char	*desnt;
 
 	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[i])
+	source = (unsigned char*)src;
+	desnt = (unsigned char*)dst;
+	while (i < n)
 	{
-		f(i, &s[i]);
+		desnt[i] = source[i];
+		if (source[i] == (unsigned char)c)
+			return (desnt + i + 1);
 		i++;
 	}
+	return (NULL);
 }
