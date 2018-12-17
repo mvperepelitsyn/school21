@@ -6,7 +6,7 @@
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 15:23:37 by dfrost-a          #+#    #+#             */
-/*   Updated: 2018/12/16 20:52:18 by dfrost-a         ###   ########.fr       */
+/*   Updated: 2018/12/16 21:19:28 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,16 @@ static char		**checkwords(char const *s, char **ar, char c)
 	while (ar[i] != NULL)
 		i++;
 	if (i != (k))
-		return (NULL);
-	else
-		return (ar);
+	{
+		while (i >= 0)
+		{
+			ft_strdel(ar++);
+			i--;
+		}
+		free(ar);
+		ar = NULL;
+	}
+	return (ar);
 }
 
 char			**ft_strsplit(char const *s, char c)

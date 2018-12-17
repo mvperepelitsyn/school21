@@ -6,12 +6,29 @@
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 17:13:24 by dfrost-a          #+#    #+#             */
-/*   Updated: 2018/12/13 22:11:03 by dfrost-a         ###   ########.fr       */
+/*   Updated: 2018/12/16 22:02:51 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+static	int		ft_elem_count(int n)
+{
+	int k;
+
+	k = 0;
+	if (n < 0)
+		k++;
+	if (n == 0)
+		k++;
+	while (n != 0)
+	{
+		n = n / 10;
+		k++;
+	}
+	return (k);
+}
 
 static	char	*fillstr(char *str, int k, int n)
 {
