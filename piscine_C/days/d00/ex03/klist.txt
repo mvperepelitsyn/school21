@@ -1,0 +1,7 @@
+Credentials cache: API:7048
+        Principal: dfrost-a@21-SCHOOL.RU
+
+  Issued                Expires               Principal
+Aug 21 15:57:30 2018  Aug 22 01:58:15 2018  krbtgt/21-SCHOOL.RU@21-SCHOOL.RU
+Aug 21 15:57:32 2018  Aug 22 01:58:15 2018  ldap/ldap-master.21-school.ru@21-SCHOOL.RU
+Aug 21 15:57:32 2018  Aug 22 01:58:15 2018  HTTP/storage-student.21-school.ru@21-SCHOOL.RU
