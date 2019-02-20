@@ -78,14 +78,10 @@ static	char	*iwannadie(char const *s, char *str)
 
 char			*ft_strtrim(char const *s)
 {
-	size_t	i;
-	size_t	j;
 	char	*str;
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
 	str = ft_strnew(ft_hm_ws(s));
 	if (str == NULL)
 		return (NULL);
