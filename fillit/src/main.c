@@ -6,13 +6,15 @@
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 13:58:21 by dfrost-a          #+#    #+#             */
-/*   Updated: 2019/02/20 17:53:55 by dfrost-a         ###   ########.fr       */
+/*   Updated: 2019/02/22 13:38:05 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "../fillit.h"
 #include <stdio.h>
+
+
 
 static	int		how_many_cells(char	*str)
 {
@@ -41,8 +43,11 @@ int		main(int argc, char **argv)
 	char	*line;
 	int		fd;
 	int 	i;
+	t_point	test;
 
 	i = 0;
+	test.x = 5;
+	test.y = 88;
 	if (argc != 2)
 		return (0);
 	fd = open(argv[1], O_RDONLY);
@@ -57,5 +62,6 @@ int		main(int argc, char **argv)
 		return (0);
 	}
 	printf("I found %d of '#' in this file\n", i);
+	printf("This %d is not equal to this %d\n", test.x, test.y);
 	close(fd);
 }
