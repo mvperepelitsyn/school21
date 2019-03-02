@@ -6,7 +6,7 @@
 /*   By: dfrost-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 13:58:21 by dfrost-a          #+#    #+#             */
-/*   Updated: 2019/02/28 18:00:46 by dfrost-a         ###   ########.fr       */
+/*   Updated: 2019/03/02 09:36:44 by dfrost-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ static void		maketetr(char *str, t_tetr *tetr)
 					l++;
 			}
 			x++;
+			str++;
 		}
 		x = 0;
 		y++;
@@ -144,10 +145,23 @@ static	int		ft_checksym(char *str)
 			count++;
 		i++;
 	}
-	return ((str[i] == '\n' && i == 20 && count == 4 && ft_checkconn(str) == 1) ? 1 : 0);
+	return ((/*str[i] == '\n' &&*/i == 20 && count == 4 && ft_checkconn(str) == 1) ? 1 : 0);
 }
 
-static	int		ft_read(int fd, t_tetr *tetr)
+static void		ft_read(int fd, t_tetr *tetr)
+{
+	char	buf[21];
+	int		j;
+
+	if (read(fd, buf, 21) > 0)
+	{
+		maketetr(buf, tetr);
+		tetr->name = 65;
+	}
+}
+
+/*
+static	int		ft_read(int fd, t_tetr **tetr, int i)
 {
 	char	buf[21];
 	size_t	i;
@@ -155,21 +169,21 @@ static	int		ft_read(int fd, t_tetr *tetr)
 	i = 0;
 	while (read(fd, buf, 21) == 21)
 	{
-		maketetr(buf, &tetr[i]);
-		tetr[i].name = 65 + i;
+		maketetr(buf, tetr[i]);
+		tetr[i]->name = 65 + i;
 		i++;
 	}
 	return (0);
 }
+*/
 
 static	int		howmanytetr(int fd)
 {
 	char	buf[21];
 	int		i;
-	int		x;
 
 	i = 0;
-	while ((x = read(fd, buf, 21)) > 0)
+	while (read(fd, buf, 21) > 0)
 	{
 		if (ft_checksym(buf) == 1)
 			i++;
@@ -177,19 +191,28 @@ static	int		howmanytetr(int fd)
 			return (-1);
 
 	}
+	close(fd);											//?? why does it work like this? idk
 	return (i);
-
 }
 
 int				main(int argc, char **argv)
 {
 	int		fd;
 	int		i;
+	int		l;
+	int		j;
+	t_tetr	tetr;
 
 	if (argc != 2)
 		return (0);
+	l = 0;
+	j = 0;
 	fd = open(argv[1], O_RDONLY);
 	i = howmanytetr(fd);
+	close(fd);											//??
+	fd = open(argv[1], O_RDONLY);
+	ft_read(fd, &tetr);
+	printstruc(&tetr);
 	ft_putstr("How many tetraminos? ");
 	ft_putnbr(i);
 	ft_putchar('\n');
