@@ -20,33 +20,9 @@ fcntl.h
 libft.h
 /Users/dfrost-a/Desktop/21/fillit_3.0/libft.h
 
-/Users/dfrost-a/Desktop/21/fillit_3.0/src/ft_checkconn.c
-../fillit.h
-/Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
-
-/Users/dfrost-a/Desktop/21/fillit_3.0/src/ft_checksym.c
-../fillit.h
-/Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
-
-/Users/dfrost-a/Desktop/21/fillit_3.0/src/ft_read.c
-../fillit.h
-/Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
-
-/Users/dfrost-a/Desktop/21/fillit_3.0/src/howmanytetr.c
-../fillit.h
-/Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
-
 /Users/dfrost-a/Desktop/21/fillit_3.0/src/main.c
 ../fillit.h
 /Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
 stdio.h
 -
-
-/Users/dfrost-a/Desktop/21/fillit_3.0/src/maketetr.c
-../fillit.h
-/Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
-
-/Users/dfrost-a/Desktop/21/fillit_3.0/src/printstructs.c
-../fillit.h
-/Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
 
