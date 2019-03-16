@@ -73,6 +73,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/dfrost-a/Desktop/21/fillit_3.0/src/howmanytetr.c" "/Users/dfrost-a/Desktop/21/fillit_3.0/cmake-build-debug/CMakeFiles/fillit_3_0.dir/src/howmanytetr.c.o"
   "/Users/dfrost-a/Desktop/21/fillit_3.0/src/main.c" "/Users/dfrost-a/Desktop/21/fillit_3.0/cmake-build-debug/CMakeFiles/fillit_3_0.dir/src/main.c.o"
   "/Users/dfrost-a/Desktop/21/fillit_3.0/src/maketetr.c" "/Users/dfrost-a/Desktop/21/fillit_3.0/cmake-build-debug/CMakeFiles/fillit_3_0.dir/src/maketetr.c.o"
+  "/Users/dfrost-a/Desktop/21/fillit_3.0/src/movecoord.c" "/Users/dfrost-a/Desktop/21/fillit_3.0/cmake-build-debug/CMakeFiles/fillit_3_0.dir/src/movecoord.c.o"
   "/Users/dfrost-a/Desktop/21/fillit_3.0/src/printstructs.c" "/Users/dfrost-a/Desktop/21/fillit_3.0/cmake-build-debug/CMakeFiles/fillit_3_0.dir/src/printstructs.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

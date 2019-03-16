@@ -78,4 +78,4 @@ add_executable(fillit_3_0
         src/main.c
         src/maketetr.c
         src/printstructs.c
-        fillit.h)
+        fillit.h src/movecoord.c)

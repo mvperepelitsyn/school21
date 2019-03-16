@@ -69,6 +69,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fillit_3_0.dir/src/main.c.o"
   "CMakeFiles/fillit_3_0.dir/src/maketetr.c.o"
   "CMakeFiles/fillit_3_0.dir/src/printstructs.c.o"
+  "CMakeFiles/fillit_3_0.dir/src/movecoord.c.o"
   "fillit_3_0.pdb"
   "fillit_3_0"
 )

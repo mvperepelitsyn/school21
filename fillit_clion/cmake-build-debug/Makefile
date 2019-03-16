@@ -1986,6 +1986,33 @@ src/maketetr.c.s:
 	$(MAKE) -f CMakeFiles/fillit_3_0.dir/build.make CMakeFiles/fillit_3_0.dir/src/maketetr.c.s
 .PHONY : src/maketetr.c.s
 
+src/movecoord.o: src/movecoord.c.o
+
+.PHONY : src/movecoord.o
+
+# target to build an object file
+src/movecoord.c.o:
+	$(MAKE) -f CMakeFiles/fillit_3_0.dir/build.make CMakeFiles/fillit_3_0.dir/src/movecoord.c.o
+.PHONY : src/movecoord.c.o
+
+src/movecoord.i: src/movecoord.c.i
+
+.PHONY : src/movecoord.i
+
+# target to preprocess a source file
+src/movecoord.c.i:
+	$(MAKE) -f CMakeFiles/fillit_3_0.dir/build.make CMakeFiles/fillit_3_0.dir/src/movecoord.c.i
+.PHONY : src/movecoord.c.i
+
+src/movecoord.s: src/movecoord.c.s
+
+.PHONY : src/movecoord.s
+
+# target to generate assembly for a file
+src/movecoord.c.s:
+	$(MAKE) -f CMakeFiles/fillit_3_0.dir/build.make CMakeFiles/fillit_3_0.dir/src/movecoord.c.s
+.PHONY : src/movecoord.c.s
+
 src/printstructs.o: src/printstructs.c.o
 
 .PHONY : src/printstructs.o
@@ -2229,6 +2256,9 @@ help:
 	@echo "... src/maketetr.o"
 	@echo "... src/maketetr.i"
 	@echo "... src/maketetr.s"
+	@echo "... src/movecoord.o"
+	@echo "... src/movecoord.i"
+	@echo "... src/movecoord.s"
 	@echo "... src/printstructs.o"
 	@echo "... src/printstructs.i"
 	@echo "... src/printstructs.s"

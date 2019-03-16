@@ -34,16 +34,16 @@ static void     printmap(char **map, int l)
     }
 }
 
-static void     fillmap(char **map)
+static void     fillmap(char **map, int k)
 {
     int i;
     int j;
 
     i = 0;
     j = 0;
-    while (i < 4)
+    while (i < k)
     {
-        while (j < 4)
+        while (j < k)
         {
             map[i][j] = '.';
             j++;
@@ -81,76 +81,75 @@ static char     **ft_makemap(int i)
         j++;
     }
     map[j] = NULL;
-    fillmap(map);
+    fillmap(map, i);
     return(map);
     //ft_freemap(map, i);
 }
 
-static void     move_minusx(t_atetr **mtetr, int i)
-{
-    int l;
-
-    l = 0;
-    while (l < 4)
-    {
-        (*mtetr)->tetr[i]->coord[l].x++;
-        if ((*mtetr)->tetr[i]->coord[l].x < 0)
-            move_minusx(mtetr, i);
-        l++;
-    }
-}
-
-static void     move_minusy(t_atetr **mtetr, int i)
-{
-    int l;
-
-    l = 0;
-    while (l < 4)
-    {
-        (*mtetr)->tetr[i]->coord[l].y++;
-        if ((*mtetr)->tetr[i]->coord[l].y < 0)
-            move_minusy(mtetr, i);
-        l++;
-    }
-}
-
-static  void    move_coord(t_atetr **mtetr, int k)
+static  int     ft_fit(int  k,  t_atetr **mtetr)
 {
     int i;
-    int x;
-    int y;
+    int maxx;
+    int maxy;
     int l;
 
     i = 0;
     l = 0;
-    while (i < k)
+    maxx = (*mtetr)->tetr[i]->coord[l].x;
+    maxy = (*mtetr)->tetr[i]->coord[l].y;
+    while (i < (*mtetr)->count)
     {
-        x = (*mtetr)->tetr[i]->coord[0].x;
-        y = (*mtetr)->tetr[i]->coord[0].y;
         while (l < 4)
         {
-            (*mtetr)->tetr[i]->coord[l].x = (*mtetr)->tetr[i]->coord[l].x - x;
-            (*mtetr)->tetr[i]->coord[l].y = (*mtetr)->tetr[i]->coord[l].y - y;
-            if ((*mtetr)->tetr[i]->coord[l].x < 0)
-                move_minusx(mtetr, i);
-            if ((*mtetr)->tetr[i]->coord[l].y < 0)
-                move_minusy(mtetr, i);
+            if ((*mtetr)->tetr[i]->coord[l].x > maxx)
+                maxx = (*mtetr)->tetr[i]->coord[l].x;
+            if ((*mtetr)->tetr[i]->coord[l].y > maxy)
+                maxy = (*mtetr)->tetr[i]->coord[l].y;
             l++;
-
         }
         l = 0;
         i++;
     }
+    if (maxx > (k - 1) || maxy > (k - 1))
+        return (0);
+    return (1);
+
 }
+/*
+static  int     doesitfit(char **map, t_atetr **mtetr, int i)
+{
+    int l;
+
+    l = 0;
+    while (l < 4)
+    {
+        map[(*mtetr)->tetr[i]->coord[l].x)][(*mtetr)->tetr[i]->coord[l].y)] = (*mtetr)->tetr[i]->name;
+        l++;
+    }
+    while (map[i] != NULL)
+    {
+        while (map[i][j] != '\n')
+        {
+            map[i][j] =
+        }
+    }
+}
+*/
 
 static  void    ft_solve(t_atetr **mtetr)
 {
     int     i;
     char    **map;
 
-    i = 4;
+    i = 2;
     map = ft_makemap(i);
-
+    while (!(ft_fit(i, mtetr)))
+    {
+        ft_freemap(map, i);
+        i++;
+        map = ft_makemap(i);
+    }
+    printmap(map, i);
 }
 
 int				main(int argc, char **argv)
@@ -179,7 +178,7 @@ int				main(int argc, char **argv)
 	ft_read(fd, &mtetr);
 	move_coord(&mtetr, mtetr->count);
     printstructs(&mtetr);
-    //ft_solve(&mtetr);
+    ft_solve(&mtetr);
 	free(mtetr->tetr);
 	free(mtetr);
 	close(fd);

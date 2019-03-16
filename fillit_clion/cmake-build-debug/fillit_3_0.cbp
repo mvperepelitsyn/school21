@@ -297,6 +297,9 @@
 		<Unit filename="/Users/dfrost-a/Desktop/21/fillit_3.0/src/maketetr.c">
 			<Option target="fillit_3_0"/>
 		</Unit>
+		<Unit filename="/Users/dfrost-a/Desktop/21/fillit_3.0/src/movecoord.c">
+			<Option target="fillit_3_0"/>
+		</Unit>
 		<Unit filename="/Users/dfrost-a/Desktop/21/fillit_3.0/src/printstructs.c">
 			<Option target="fillit_3_0"/>
 		</Unit>

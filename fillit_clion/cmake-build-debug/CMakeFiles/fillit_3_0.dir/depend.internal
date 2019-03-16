@@ -214,6 +214,10 @@ CMakeFiles/fillit_3_0.dir/src/maketetr.c.o
  ../libft/includes/libft.h
  /Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
  /Users/dfrost-a/Desktop/21/fillit_3.0/src/maketetr.c
+CMakeFiles/fillit_3_0.dir/src/movecoord.c.o
+ ../libft/includes/libft.h
+ /Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h
+ /Users/dfrost-a/Desktop/21/fillit_3.0/src/movecoord.c
 CMakeFiles/fillit_3_0.dir/src/printstructs.c.o
  ../libft/includes/libft.h
  /Users/dfrost-a/Desktop/21/fillit_3.0/fillit.h

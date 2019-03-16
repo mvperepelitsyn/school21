@@ -14,7 +14,7 @@
 # define FILLIT_H
 # include <fcntl.h>
 # include "libft.h"
-# define NAME "../valid_test"
+# define NAME "../valid_test1"
 
 typedef struct		s_point
 {
@@ -41,5 +41,10 @@ int     ft_checksym(char *str);
 void	printstructs(t_atetr **mtetr);
 void	ft_read(int fd, t_atetr **mtetr);
 void	maketetr(char *str, t_atetr **mtetr, int j);
+void    move_coord(t_atetr **mtetr, int k);
+//void    move_minusy(t_atetr **mtetr, int i);
+//void    move_minusx(t_atetr **mtetr, int i);
+
+
 
 #endif

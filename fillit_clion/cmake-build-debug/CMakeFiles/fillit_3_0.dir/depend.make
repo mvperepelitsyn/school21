@@ -214,6 +214,10 @@ CMakeFiles/fillit_3_0.dir/src/maketetr.c.o: ../libft/includes/libft.h
 CMakeFiles/fillit_3_0.dir/src/maketetr.c.o: ../fillit.h
 CMakeFiles/fillit_3_0.dir/src/maketetr.c.o: ../src/maketetr.c
 
+CMakeFiles/fillit_3_0.dir/src/movecoord.c.o: ../libft/includes/libft.h
+CMakeFiles/fillit_3_0.dir/src/movecoord.c.o: ../fillit.h
+CMakeFiles/fillit_3_0.dir/src/movecoord.c.o: ../src/movecoord.c
+
 CMakeFiles/fillit_3_0.dir/src/printstructs.c.o: ../libft/includes/libft.h
 CMakeFiles/fillit_3_0.dir/src/printstructs.c.o: ../fillit.h
 CMakeFiles/fillit_3_0.dir/src/printstructs.c.o: ../src/printstructs.c
