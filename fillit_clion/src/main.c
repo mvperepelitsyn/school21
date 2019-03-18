@@ -110,10 +110,7 @@ static  int     ft_fit(int  k,  t_atetr **mtetr)
         l = 0;
         i++;
     }
-    if (maxx > (k - 1) || maxy > (k - 1))
-        return (0);
-    return (1);
-
+    return ((maxx > (k - 1) || maxy > (k - 1)) ? 0 : 1);
 }
 /*
 static  int     doesitfit(char **map, t_atetr **mtetr, int i)
@@ -136,12 +133,28 @@ static  int     doesitfit(char **map, t_atetr **mtetr, int i)
 }
 */
 
-static  void    ft_solve(t_atetr **mtetr)
+static  void    ft_fillmap(char **map, t_atetr **mtetr)
+{
+    int l;
+    int j;
+
+    l = 0;
+    j = 0;
+    while (l < 4)
+    {
+        map[(*mtetr)->tetr[j]->coord[l].y][(*mtetr)->tetr[j]->coord[l].x] = (*mtetr)->tetr[j]->name;
+        l++;
+    }
+
+
+}
+
+static  void    ft_givememap(t_atetr **mtetr)
 {
     int     i;
     char    **map;
 
-    i = 2;
+    i = 0;
     map = ft_makemap(i);
     while (!(ft_fit(i, mtetr)))
     {
@@ -149,6 +162,7 @@ static  void    ft_solve(t_atetr **mtetr)
         i++;
         map = ft_makemap(i);
     }
+    ft_fillmap(map, mtetr);
     printmap(map, i);
 }
 
@@ -166,7 +180,7 @@ int				main(int argc, char **argv)
 	mtetr = (t_atetr *)malloc(sizeof(t_atetr));
 	mtetr->count = howmanytetr(fd);
 	close(fd);											//??
-	if (mtetr->count < 0 || mtetr->count > 26)
+	if (mtetr->count < 1 || mtetr->count > 26)
 	{
 		ft_putstr("error\n");
 		free(mtetr);
@@ -178,7 +192,7 @@ int				main(int argc, char **argv)
 	ft_read(fd, &mtetr);
 	move_coord(&mtetr, mtetr->count);
     printstructs(&mtetr);
-    ft_solve(&mtetr);
+    ft_givememap(&mtetr);
 	free(mtetr->tetr);
 	free(mtetr);
 	close(fd);

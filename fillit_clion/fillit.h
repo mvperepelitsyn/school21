@@ -14,7 +14,7 @@
 # define FILLIT_H
 # include <fcntl.h>
 # include "libft.h"
-# define NAME "../valid_test1"
+# define NAME "../test1"
 
 typedef struct		s_point
 {
