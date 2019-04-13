@@ -1,0 +1,5 @@
+#Identify the default gateway in the routing table
+netstat -nr | grep default | head -1 | cut -d " " -f 13
+
+#'-n" flag means: show network addresses as numbers
+#'-r' Show the routing tables.
