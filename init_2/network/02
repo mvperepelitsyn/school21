@@ -1,0 +1,5 @@
+#(a) Identify broadcast adress
+ifconfig -L en0 | grep "broadcast " | cut -d " " -f 6
+echo
+#(b) Identify all IP adresses which are part of the same subnet
+arp -na | cut -d " " -f 2 | cut -d "(" -f 2 | cut -d ")" -f 1
