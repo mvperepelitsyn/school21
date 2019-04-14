@@ -1,0 +1,7 @@
+#Get the complete path of the file that contains the IP address of the DNS server you're using
+cat /var/run/resolv.conf
+
+#This file contains the IP address of the DNS i'm using
+#We can also see the IP with following command:
+#cat /etc/resolv.conf
+#BUT if we would use "ls -la" on that file it would say that it's linked to the /var/run/resolv.conf

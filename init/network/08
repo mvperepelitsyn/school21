@@ -1,0 +1,4 @@
+#Find the provider of slash16.org
+whois slash16.org | grep Registrar: | cut -c 12-21
+
+#whois gives us infomation about a domain, who is the owner, etc.

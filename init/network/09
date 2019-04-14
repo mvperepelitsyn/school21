@@ -1,0 +1,2 @@
+#Find the external IP of 42.fr
+dig +noall +answer 42.fr | cut -c 20-33
