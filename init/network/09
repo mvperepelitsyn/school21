@@ -1,2 +1,6 @@
-#Find the external IP of 42.fr
-dig +noall +answer 42.fr | cut -c 20-33
+163.172.250.11
+163.172.250.13
+163.172.250.12
+
+#If you're wish to see the command in work, uncomment this:
+#dig +noall +answer 42.fr | cut -c 20-33

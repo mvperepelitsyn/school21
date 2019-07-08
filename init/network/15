@@ -1,6 +1,4 @@
-#Make the intra.42.fr address reroute to 46.19.122.85
-
-#We can make it, if we are going to modify the file /private/etc/hosts (from a previous question)
-#And add to the file something like that:
-#"46.19.122.85		intra.42.fr"
-#This will give us rerouting, though we can't test, because don't have enough rights
+We can make it, if we are going to modify the file /private/etc/hosts (from a previous question)
+And add to the file something like that:
+"46.19.122.85		intra.42.fr"
+This will give us rerouting, though we can't test it, because don't have enough rights

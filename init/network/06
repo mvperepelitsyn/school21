@@ -1,6 +1,7 @@
-#Get the complete path of the file that contains the IP address of the DNS server you're using
-cat /var/run/resolv.conf
+/var/run/resolv.conf
 
+#In order to see what this file hols uncomment following statement:
+#cat /var/run/resolv.conf
 #This file contains the IP address of the DNS i'm using
 #We can also see the IP with following command:
 #cat /etc/resolv.conf

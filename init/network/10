@@ -1,4 +1,3 @@
-#Identify the network devices between your computer and the slash16.org domain
 traceroute slash16.org
 
 #traceroute - print the route packets take to network host
