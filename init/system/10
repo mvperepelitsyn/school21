@@ -1,0 +1,3 @@
+fdisk -l
+
+#You shoud be root in order to use this command

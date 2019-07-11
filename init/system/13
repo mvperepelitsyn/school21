@@ -1,0 +1,8 @@
+top
+
+#top provides information in dynamic real-time view
+#We can alse use "ps aux", where
+#ps command - display processes
+#a - select all processes
+#u - select all processes on the terminal, including those of other users
+#x - select processes without controlling ttys

@@ -1,0 +1,5 @@
+tail -f /var/log/syslog &
+
+#It won't work if we use "sh 14", because it will run in background
+#but in another session and we can't get to it from our session
+#we can see only with "ps" command

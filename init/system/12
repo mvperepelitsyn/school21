@@ -1,0 +1,3 @@
+du -sh /var/*
+
+#option -s summarize. Display only directories withour sub-directories

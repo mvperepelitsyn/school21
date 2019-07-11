@@ -1,0 +1,4 @@
+~/.ssh/authorized_keys
+
+#I've got to set it myself in order to get this file
+#In order to check this file out we have to log in as user (not root)

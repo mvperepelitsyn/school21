@@ -1,0 +1,4 @@
+In graphic session we just got to pick "Change user" and then do it. C:
+In ssh session we just have to write "ssh <user_name>@<ip>" and write down the password.
+If want to change user inside ssh, then we have to use "su <desired_user>" and the write down the password of that user.
+Volia!

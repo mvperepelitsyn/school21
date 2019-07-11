@@ -1,0 +1,1 @@
+kill -KILL $(jobs -l | cut -c 8-11)

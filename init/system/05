@@ -1,0 +1,5 @@
+systemctl status ssh
+
+#Or we can use another command which does basically the same thing:
+#service ssh status
+#Keep in mind we have to do it as root-user

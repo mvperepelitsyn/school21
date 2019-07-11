@@ -1,0 +1,4 @@
+systemctl restart ssh
+
+#Here we again can use another command such as:
+#service ssh restart

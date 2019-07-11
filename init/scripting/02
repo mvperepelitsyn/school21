@@ -1,0 +1,4 @@
+#!/bin/bash
+read usr
+killall -9 -u $usr
+deluser --remove-home $usr

@@ -1,0 +1,4 @@
+/etc/debian_version
+
+#To see the version of debian uncomment this:
+#cat /etc/debian_version

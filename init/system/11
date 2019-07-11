@@ -1,0 +1,4 @@
+df -h
+
+#df command - shows the amount of disk space used and avaliable on Linux file
+#option -h makes output human readable
